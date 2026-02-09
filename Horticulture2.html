@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taconic Horticulture Department</title>
+
+  <style>
+    /* Taconic Theme & Base Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4fff4;
+      color: #1f3d1f;
+    }
+
+    nav {
+      background-color: #0b6623;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #0b6623;
+      color: white;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #0b6623;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .flex {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .flex img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 0.95rem;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #0b6623;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #0a5a1f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #e8f5e9;
+      margin-top: 40px;
+      color: #4b6b4b;
+      font-size: 0.9rem;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    .subheading {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .timeline-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    .timeline-table th,
+    .timeline-table td {
+      border: 1px solid #c8dec8;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .timeline-table th {
+      background-color: #e0f2e0;
+    }
+
+    @media (max-width: 900px) {
+      .flex {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#teachers">Teacher Info</a>
+    <a href="#students">Student Activities</a>
+    <a href="#ffa">FFA</a>
+    <a href="#project">Project Info</a>
+  </nav>
+
+  <!-- HOME / INTRO -->
+  <header id="home">
+    <h1>Taconic Horticulture Department</h1>
+    <p class="tagline">Stylish, informative, and student-focused — growing the future, one plant at a time.</p>
+  </header>
+
+  <div class="section">
+    <div class="card">
+      <h2>About the Department</h2>
+      <div class="flex">
+        <p style="font-size: 1.05rem;">
+          The Taconic Horticulture Department combines hands-on learning with real-world skills in plant science,
+          greenhouse management, and agricultural leadership.  
+          This website is designed by the in-house CTE IT team to provide a professional, approachable, and
+          user-friendly online presence for staff, students, and the community.
+          <br><br>
+          Our goals are to:
+          <ul>
+            <li>Present a professional and welcoming image of the department</li>
+            <li>Make information easy to find through clear navigation and structure</li>
+            <li>Highlight programs, services, and seasonal activities</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <!-- SEASONAL SALES SECTION -->
+    <div class="card" id="seasonal-sales">
+      <h2>Seasonal Plant Sales</h2>
+      <p style="font-size: 1.05rem;">
+        When seasonal sales are active, details will appear here. Customers can browse available plants and submit
+        an order request. Payment is not processed on this website — customers may pay via Venmo or in person at pickup.
+      </p>
+
+      <h3 class="subheading">Current Seasonal Sale (Example)</h3>
+      <ul style="font-size: 1rem;">
+        <li>🌸 Spring Flower Flats – $15</li>
+        <li>🌿 Herb Packs – $5</li>
+        <li>🥕 Vegetable Seedlings – $4</li>
+      </ul>
+
+      <h3 class="subheading">Order Request Form</h3>
+      <!-- This form is a placeholder; action/email handling would be configured by IT -->
+      <form>
+        <label for="cust-name">Name:</label>
+        <input id="cust-name" type="text" required>
+
+        <label for="cust-email">Email:</label>
+        <input id="cust-email" type="email" required>
+
+        <label for="plant-type">Plant Type:</label>
+        <select id="plant-type">
+          <option>Spring Flower Flats</option>
+          <option>Herb Packs</option>
+          <option>Vegetable Seedlings</option>
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input id="quantity" type="number" min="1" required>
+
+        <label for="notes">Notes (optional):</label>
+        <textarea id="notes" rows="3" placeholder="Pickup preferences, special requests, etc."></textarea>
+
+        <p style="font-size: 0.9rem; color:#555;">
+          An email notification will be sent to the designated horticulture contact for order coordination.
+          Payment will be completed via Venmo or in person at pickup.
+        </p>
+
+        <button type="submit">Submit Order Request</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TEACHER INFO -->
+  <div class="section" id="teachers">
+    <div class="card">
+      <h2>Teacher Information</h2>
+      <div class="flex">
+        <div>
+          <h3>Teacher 1 – Horticulture Instructor</h3>
+          <p>
+            Background in plant science, greenhouse operations, and agricultural education.  
+            Leads core horticulture classes, greenhouse labs, and seasonal plant production.
+          </p>
+          <p><strong>Email:</strong> teacher1@taconic.edu</p>
+        </div>
+        <div>
+          <h3>Teacher 2 – Greenhouse & FFA Advisor</h3>
+          <p>
+            Specializes in leadership development, FFA coordination, and advanced horticulture projects.  
+            Supports student competitions, community outreach, and greenhouse management.
+          </p>
+          <p><strong>Email:</strong> teacher2@taconic.edu</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STUDENT ACTIVITIES -->
+  <div class="section" id="students">
+    <div class="card">
+      <h2>Student Activities</h2>
+      <p style="font-size: 1.05rem;">
+        Students in the Taconic Horticulture program participate in a variety of hands-on activities that build
+        technical skills, teamwork, and responsibility.
+      </p>
+      <ul style="font-size: 1.05rem;">
+        <li>Greenhouse planting, watering, and plant care</li>
+        <li>Floral design projects and arrangements</li>
+        <li>Vegetable and herb production for seasonal sales</li>
+        <li>Landscape design and maintenance projects</li>
+        <li>FFA competitions, leadership events, and community service</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FFA PROGRAM -->
+  <div class="section" id="ffa">
+    <div class="card">
+      <h2>FFA Program</h2>
+      <p style="font-size: 1.05rem;">
+        The Taconic FFA chapter gives students the opportunity to develop leadership, career skills, and
+        community connections through agricultural education.
+      </p>
+      <ul style="font-size: 1.05rem;">
+        <li>Participation in local, state, and national FFA events</li>
+        <li>Career Development Events (CDEs) related to horticulture and agriculture</li>
+        <li>Community plant sales and service projects</li>
+        <li>Leadership roles within the chapter</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECT INFO / PROPOSAL SUMMARY -->
+  <div class="section" id="project">
+    <div class="card">
+      <h2>Website Project Overview</h2>
+      <p style="font-size: 1.05rem;">
+        This website is designed and developed by the Taconic CTE IT department as an internal project to support
+        the Horticulture Department. The goals are to provide a stylish, easy-to-use, and informative resource
+        for staff, students, and the public.
+      </p>
+
+      <p class="subheading">Scope & Objectives</p>
+      <ul style="font-size: 0.98rem;">
+        <li>Present a professional and approachable online presence</li>
+        <li>Make information easy to find through clear navigation and structure</li>
+        <li>Highlight programs, services, and seasonal activities</li>
+        <li>Optimize for desktop computer use</li>
+      </ul>
+
+      <p class="subheading">Timeline (Estimated)</p>
+      <table class="timeline-table">
+        <tr>
+          <th>Phase</th>
+          <th>Estimated Duration</th>
+        </tr>
+        <tr>
+          <td>Discovery & Planning</td>
+          <td>1 week</td>
+        </tr>
+        <tr>
+          <td>Design</td>
+          <td>1 week</td>
+        </tr>
+        <tr>
+          <td>Development</td>
+          <td>4 weeks</td>
+        </tr>
+        <tr>
+          <td>Testing & Launch</td>
+          <td>2 weeks</td>
+        </tr>
+        <tr>
+          <td><strong>Total</strong></td>
+          <td><strong>8 weeks</strong></td>
+        </tr>
+      </table>
+
+      <p class="subheading">Responsibilities & Assumptions</p>
+      <ul style="font-size: 0.98rem;">
+        <li>Horticulture Department provides timely feedback and content approvals</li>
+        <li>Department supplies accurate text, images, and materials</li>
+        <li>A primary contact is designated for coordination and communication</li>
+        <li>Hosting and domain follow existing Taconic IT standards</li>
+        <li>Ongoing content updates handled by designated staff after launch</li>
+      </ul>
+
+      <p style="font-size: 0.95rem; color:#555;">
+        Source code and documentation will be maintained by the CTE IT department for future updates and improvements.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Taconic Horticulture Department · Website developed by Taconic CTE IT
+  </footer>
+
+</body>
+</html>

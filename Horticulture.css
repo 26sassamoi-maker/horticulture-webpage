@@ -1,65 +1,136 @@
-/* Taconic Theme */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4fff4;
-    color: #1f3d1f;
-  }
-  
-  nav {
-    background-color: #0b6623; /* Taconic green */
-    padding: 15px;
-    text-align: center;
-  }
-  
-  nav a {
-    color: white;
-    margin: 0 20px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  header {
-    text-align: center;
-    padding: 40px 20px;
-    background: #0b6623;
-    color: white;
-  }
-  
-  .section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
-  }
-  
-  h2 {
-    color: #0b6623;
-    text-align: center;
-  }
-  
-  .flex {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  
-  .flex img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #e8f5e9;
-    margin-top: 40px;
-    color: #4b6b4b;
-  }
-  
+/* Taconic Theme & Base Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4fff4;
+      color: #1f3d1f;
+    }
+
+    nav {
+      background-color: #0b6623;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #0b6623;
+      color: white;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #0b6623;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .flex {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .flex img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 0.95rem;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #0b6623;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #0a5a1f;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #e8f5e9;
+      margin-top: 40px;
+      color: #4b6b4b;
+      font-size: 0.9rem;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    .subheading {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .timeline-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    .timeline-table th,
+    .timeline-table td {
+      border: 1px solid #c8dec8;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .timeline-table th {
+      background-color: #e0f2e0;
+    }
+
+    @media (max-width: 900px) {
+      .flex {
+        flex-direction: column;
+      }
+    }
+

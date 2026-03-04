@@ -5,11 +5,12 @@ html, body {
   margin: 0;
   font-family: Arial, sans-serif;
 
-  background-image: url("https://tinyurl.com/t8x74hyh");
+  background-image: linear-gradient(rgba(236, 232, 232, 0.4), rgba(0, 80, 20, 0.726)), url("https://tinyurl.com/t8x74hyh");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+
 
   color: #1f3d1f;
 }
@@ -19,14 +20,16 @@ html, body {
 -------------------------------------------------- */
 nav {
   background-color: rgba(11, 102, 35, 0.85);
-  padding: 15px;
-  text-align: center;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* position: relative; NOT sticky
+  padding-left: 120px; */
+
   position: sticky;
   top: 0;
-  z-index: 1000;
-
-  position: relative;
-  padding-left: 120px; /* space for logo */
 }
 
 nav a {
@@ -40,20 +43,26 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Logo */
 .taconic-logo {
-  height: 55px;
+  height: 50px;
   width: auto;
   position: absolute;
   left: 20px;
   top: 10px;
-  transition: 0.3s ease;
+  z-index: 2000;
 }
+
+
 
 .taconic-logo:hover {
   filter: drop-shadow(0 0 8px #FFD700)
           drop-shadow(0 0 12px #FFD700);
 }
+
+.hero-banner {
+  margin-top: 70px; /* same as nav height */
+}
+
 
 /* --------------------------------------------------
    HERO BANNER
